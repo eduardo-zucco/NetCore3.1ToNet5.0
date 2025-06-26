@@ -2,6 +2,7 @@ using System;
 using Api.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Xunit;
 
 namespace Api.Data.Test
@@ -23,7 +24,10 @@ namespace Api.Data.Test
         {
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddDbContext<MyContext>(o =>
-                o.UseMySql($"Persist Security Info=True;Server=localhost;Database={dataBaseName};User=root;Password=mudar@123"),
+                o.UseMySql(
+                    $"Persist Security Info=True;Server=localhost;Database={dataBaseName};User=root;Password=mudar@123",
+                    new MySqlServerVersion(new Version(8, 0, 21))
+                ),
                   ServiceLifetime.Transient
             );
 

@@ -34,7 +34,7 @@ namespace application
         {
             if (_environment.IsEnvironment("Testing"))
             {
-                Environment.SetEnvironmentVariable("DB_CONNECTION", "Persist Security Info=True;Server=localhost;Port=3306;DataBase=dbAPI_Integration;Uid=root;Pwd=mudar@123");
+                Environment.SetEnvironmentVariable("DB_CONNECTION", "Persist Security Info=True;Server=localhost;Port=3306;DataBase=CourseAPI_Integration;Uid=root;Pwd=DevSysth2025@");
                 Environment.SetEnvironmentVariable("DATABASE", "MYSQL");
                 Environment.SetEnvironmentVariable("MIGRATION", "APLICAR");
                 Environment.SetEnvironmentVariable("Audience", "ExemploAudience");
@@ -95,19 +95,19 @@ namespace application
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Curso de API com AspNetCore 3.1 - Na Prática",
+                    Title = "Curso de API com .NETCore3.1/.NET5.0 - Na Prática",
                     Description = "Arquitetura DDD",
-                    TermsOfService = new Uri("http://www.mfrinfo.com.br"),
+                    TermsOfService = new Uri("https://github.com/eduardo-zucco/curso_api_netcore.git"),
                     Contact = new OpenApiContact
                     {
-                        Name = "Marcos Fabricio Rosa",
-                        Email = "mfr@mail.com",
-                        Url = new Uri("http://www.mfrinfo.com.br")
+                        Name = "Eduardo Zucco",
+                        Email = "eduardozucco88@gmail.com",
+                        Url = new Uri("https://github.com/eduardo-zucco/curso_api_netcore.git")
                     },
                     License = new OpenApiLicense
                     {
                         Name = "Termo de Licença de Uso",
-                        Url = new Uri("http://www.mfrinfo.com.br")
+                        Url = new Uri("https://github.com/eduardo-zucco/curso_api_netcore.git")
                     }
                 });
 
@@ -143,7 +143,7 @@ namespace application
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Curso de API com AspNetCore 3.1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Curso de API com .NETCore3.1/.NET5.0 - Na Prática");
                 c.RoutePrefix = string.Empty;
             });
 

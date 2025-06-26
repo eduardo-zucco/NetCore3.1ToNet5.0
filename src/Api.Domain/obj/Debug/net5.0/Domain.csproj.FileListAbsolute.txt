@@ -1,0 +1,12 @@
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\bin\Debug\net5.0\Domain.deps.json
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\bin\Debug\net5.0\Domain.dll
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\bin\Debug\net5.0\ref\Domain.dll
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\bin\Debug\net5.0\Domain.pdb
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\obj\Debug\net5.0\Domain.dll
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\obj\Debug\net5.0\ref\Domain.dll
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\obj\Debug\net5.0\Domain.pdb
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Domain\obj\Debug\net5.0\Domain.csprojAssemblyReference.cache

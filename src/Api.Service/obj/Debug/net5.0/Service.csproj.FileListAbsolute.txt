@@ -1,0 +1,17 @@
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\net5.0\Service.deps.json
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\net5.0\Service.dll
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\net5.0\ref\Service.dll
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\net5.0\Service.pdb
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\net5.0\Data.dll
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\net5.0\Domain.dll
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\net5.0\Domain.pdb
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\net5.0\Data.pdb
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\net5.0\Service.csprojAssemblyReference.cache
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\net5.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\net5.0\Service.AssemblyInfoInputs.cache
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\net5.0\Service.AssemblyInfo.cs
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\net5.0\Service.csproj.CoreCompileInputs.cache
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\net5.0\Service.csproj.CopyComplete
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\net5.0\Service.dll
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\net5.0\ref\Service.dll
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\net5.0\Service.pdb

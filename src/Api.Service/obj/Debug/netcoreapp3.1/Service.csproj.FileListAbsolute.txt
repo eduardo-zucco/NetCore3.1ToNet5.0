@@ -12,3 +12,17 @@ C:\curso_api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.csproj.Core
 C:\curso_api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
 C:\curso_api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.dll
 C:\curso_api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.pdb
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\netcoreapp3.1\Service.deps.json
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\netcoreapp3.1\Service.dll
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\netcoreapp3.1\Service.pdb
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\netcoreapp3.1\Data.dll
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\netcoreapp3.1\Domain.dll
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\netcoreapp3.1\Domain.pdb
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\bin\Debug\netcoreapp3.1\Data.pdb
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\netcoreapp3.1\Service.dll
+c:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\netcoreapp3.1\Service.pdb
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\netcoreapp3.1\Service.csprojAssemblyReference.cache
+C:\ArquivosEdu\NetCore31ToNet5\src\Api.Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
