@@ -96,7 +96,7 @@ namespace application
                 {
                     Version = "v1",
                     Title = "Curso de API com .NETCore3.1/.NET5.0 - Na Prática",
-                    Description = "Arquitetura DDD",
+                    Description = "Arquitetura DDD - Atualizado em 26/06/2025",
                     TermsOfService = new Uri("https://github.com/eduardo-zucco/curso_api_netcore.git"),
                     Contact = new OpenApiContact
                     {
