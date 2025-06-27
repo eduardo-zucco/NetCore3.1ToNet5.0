@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8sCOa/HPKIXMGgDfhSFMp9D6mOlrCvrl/p5xlWb0NeVFrM62x4t50q/+aHxvMOKn9TEk+pgVWLnlOsMWtlzHRw==",
+  "dgSpecHash": "cb4w9qizpZzMU9Ae8vxS3serhjxqcZ/m0JOJceUzIqCaVWJ8HTv6KARwfC3OvqOdvSZwxrbPMwC5fAOlIafvgQ==",
   "success": true,
-  "projectFilePath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj",
+  "projectFilePath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.8.0\\microsoft.identitymodel.jsonwebtokens.6.8.0.nupkg.sha512",
