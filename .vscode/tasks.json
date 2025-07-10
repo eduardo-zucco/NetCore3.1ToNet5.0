@@ -55,7 +55,8 @@
             "args": [
                 "test",
                 "${workspaceFolder}/src/Api.Service.Test/Api.Service.Test.csproj"
-            ]
+            ],
+            "problemMatcher": []
         },
         {
             "label": "Application.Testes",
@@ -64,7 +65,8 @@
             "args": [
                 "test",
                 "${workspaceFolder}/src/Api.Application.Test/Api.Application.Test.csproj"
-            ]
+            ],
+            "problemMatcher": []
         },
         {
             "label": "Integration.Testes",
@@ -73,7 +75,8 @@
             "args": [
                 "test",
                 "${workspaceFolder}/src/Api.Integration.Test/Api.Integration.Test.csproj"
-            ]
+            ],
+            "problemMatcher": []
         }
     ]
 }

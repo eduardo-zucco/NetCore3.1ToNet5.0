@@ -10,6 +10,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+
 using System.Collections.Generic;
 using Api.CrossCutting.Mappings;
 using AutoMapper;
@@ -32,9 +33,18 @@ namespace application
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin() // Angular
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
             if (_environment.IsEnvironment("Testing"))
             {
-                Environment.SetEnvironmentVariable("DB_CONNECTION", "Persist Security Info=True;Server=localhost;Port=3306;DataBase=CourseAPI_Integration;Uid=root;Pwd=DevSysth2025@");
+                Environment.SetEnvironmentVariable("DB_CONNECTION", "Persist Security Info=True;Server=localhost;Port=3306;DataBase=CourseAPI_NET6_Integration;Uid=root;Pwd=DevSysth2025@");
                 Environment.SetEnvironmentVariable("DATABASE", "MYSQL");
                 Environment.SetEnvironmentVariable("MIGRATION", "APLICAR");
                 Environment.SetEnvironmentVariable("Audience", "ExemploAudience");
@@ -50,6 +60,7 @@ namespace application
                 cfg.AddProfile(new DtoToModelProfile());
                 cfg.AddProfile(new EntityToDtoProfile());
                 cfg.AddProfile(new ModelToEntityProfile());
+
             });
 
             IMapper mapper = config.CreateMapper();
@@ -95,7 +106,7 @@ namespace application
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Curso de API com .NETCore3.1/.NET5.0 - Na Prática",
+                    Title = "Curso de API com .NETCore3.1/.NET5.0/.NET6.0 - Na Prática",
                     Description = "Arquitetura DDD - Atualizado em 26/06/2025",
                     TermsOfService = new Uri("https://github.com/eduardo-zucco/curso_api_netcore.git"),
                     Contact = new OpenApiContact
@@ -143,12 +154,12 @@ namespace application
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Curso de API com .NETCore3.1/.NET5.0 - Na Prática");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Curso de API com .NETCore3.1/.NET5.0/.NET6.0 - Na Prática");
                 c.RoutePrefix = string.Empty;
             });
 
+            app.UseCors();
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

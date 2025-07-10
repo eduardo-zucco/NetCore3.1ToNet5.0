@@ -23,6 +23,8 @@ namespace Api.Data.Context
             modelBuilder.Entity<MunicipioEntity>(new MunicipioMap().Configure);
             modelBuilder.Entity<CepEntity>(new CepMap().Configure);
 
+            modelBuilder.Entity<UserCompletoEntity>(new UserCompletoMap().Configure);
+
             modelBuilder.Entity<UserEntity>().HasData(
                 new UserEntity
                 {

@@ -1,39 +1,46 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Integration.Test\\Api.Integration.Test.csproj": {}
+    "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Integration.Test\\Api.Integration.Test.csproj": {}
   },
   "projects": {
-    "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Application\\application.csproj": {
+    "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Application\\application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Application\\application.csproj",
+        "projectUniqueName": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Application\\application.csproj",
         "projectName": "application",
-        "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Application\\application.csproj",
+        "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Application\\application.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Application\\obj\\",
+        "outputPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.CrossCutting\\CrossCutting.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.CrossCutting\\CrossCutting.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj"
               },
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj"
               },
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Service\\Service.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Service\\Service.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj"
               }
             }
           }
@@ -45,16 +52,16 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[6.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -63,7 +70,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -75,40 +83,47 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.CrossCutting\\CrossCutting.csproj": {
+    "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.CrossCutting\\CrossCutting.csproj",
+        "projectUniqueName": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj",
         "projectName": "CrossCutting",
-        "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.CrossCutting\\CrossCutting.csproj",
+        "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.CrossCutting\\obj\\",
+        "outputPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Data\\Data.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Data\\Data.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Data\\Data.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Data\\Data.csproj"
               },
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj"
               },
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Service\\Service.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Service\\Service.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj"
               }
             }
           }
@@ -120,16 +135,16 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[10.1.1, )"
+              "version": "[11.0.1, )"
             },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[8.1.1, )"
+              "version": "[11.0.0, )"
             }
           },
           "imports": [
@@ -138,7 +153,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -147,34 +163,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Data\\Data.csproj": {
+    "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Data\\Data.csproj",
+        "projectUniqueName": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Data\\Data.csproj",
+        "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Data\\Data.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Data\\obj\\",
+        "outputPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj"
               }
             }
           }
@@ -186,28 +209,28 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[6.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[6.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[6.0.2, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[6.0.1, )"
             }
           },
           "imports": [
@@ -216,7 +239,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -225,31 +249,38 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj": {
+    "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj",
+        "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\obj\\",
+        "outputPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -260,8 +291,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
@@ -274,7 +305,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -283,43 +315,50 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Integration.Test\\Api.Integration.Test.csproj": {
+    "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Integration.Test\\Api.Integration.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Integration.Test\\Api.Integration.Test.csproj",
+        "projectUniqueName": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Integration.Test\\Api.Integration.Test.csproj",
         "projectName": "Api.Integration.Test",
-        "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Integration.Test\\Api.Integration.Test.csproj",
+        "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Integration.Test\\Api.Integration.Test.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Integration.Test\\obj\\",
+        "outputPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Integration.Test\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Application\\application.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Application\\application.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Application\\application.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Application\\application.csproj"
               },
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.CrossCutting\\CrossCutting.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.CrossCutting\\CrossCutting.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj"
               },
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Data\\Data.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Data\\Data.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Data\\Data.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Data\\Data.csproj"
               },
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj"
               }
             }
           }
@@ -331,16 +370,16 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[10.1.1, )"
+              "version": "[11.0.1, )"
             },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[8.1.1, )"
+              "version": "[11.0.0, )"
             },
             "Faker.NETCore": {
               "target": "Package",
@@ -348,11 +387,11 @@
             },
             "Microsoft.AspNetCore.TestHost": {
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[6.0.2, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.8.3, )"
+              "version": "[17.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -360,7 +399,7 @@
             },
             "coverlet.collector": {
               "target": "Package",
-              "version": "[3.0.2, )"
+              "version": "[3.1.2, )"
             },
             "xunit": {
               "target": "Package",
@@ -377,7 +416,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -386,37 +426,44 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Service\\Service.csproj": {
+    "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Service\\Service.csproj",
+        "projectUniqueName": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Service\\Service.csproj",
+        "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Service\\obj\\",
+        "outputPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Data\\Data.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Data\\Data.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Data\\Data.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Data\\Data.csproj"
               },
-              "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj": {
-                "projectPath": "C:\\ArquivosEdu\\NetCore31ToNet5\\src\\Api.Domain\\Domain.csproj"
+              "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj": {
+                "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj"
               }
             }
           }
@@ -428,12 +475,12 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[10.1.1, )"
+              "version": "[11.0.1, )"
             }
           },
           "imports": [
@@ -442,7 +489,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -451,7 +499,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
