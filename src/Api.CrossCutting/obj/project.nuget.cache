@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y5dLdFzk9JNex4VzuLT5HiWnKVpKyE1syTDzgOkduy5e3Z/gKz2xHDxb3eWb/sV7Uk+MGkOWCS5Bc2plvmp8aw==",
+  "dgSpecHash": "SxryzP1QM/ex8nf4Cw5+Ly8rZqakgml8hlI64WZzz6eD12lD7ngunSwfnOc8fkpcRytMUPQh6YMBnVWsKTR7zw==",
   "success": true,
-  "projectFilePath": "c:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj",
+  "projectFilePath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

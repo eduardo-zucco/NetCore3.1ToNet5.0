@@ -18,5 +18,11 @@ namespace Api.Domain.Models
             set { _email = value; }
         }
 
+        
+        
+        
+        
+
+
     }
 }

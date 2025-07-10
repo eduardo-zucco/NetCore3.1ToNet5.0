@@ -33,6 +33,15 @@ namespace application
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin() // Angular
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
             if (_environment.IsEnvironment("Testing"))
             {
                 Environment.SetEnvironmentVariable("DB_CONNECTION", "Persist Security Info=True;Server=localhost;Port=3306;DataBase=CourseAPI_NET6_Integration;Uid=root;Pwd=DevSysth2025@");
@@ -51,6 +60,7 @@ namespace application
                 cfg.AddProfile(new DtoToModelProfile());
                 cfg.AddProfile(new EntityToDtoProfile());
                 cfg.AddProfile(new ModelToEntityProfile());
+
             });
 
             IMapper mapper = config.CreateMapper();
@@ -148,8 +158,8 @@ namespace application
                 c.RoutePrefix = string.Empty;
             });
 
+            app.UseCors();
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

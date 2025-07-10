@@ -2381,7 +2381,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2392,21 +2393,28 @@
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Application\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj": {
-              "projectPath": "c:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj"
+            "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj": {
+              "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj"
             },
             "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj": {
               "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj"

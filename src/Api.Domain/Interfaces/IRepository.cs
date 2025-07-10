@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Api.Domain.Entities;
 
@@ -13,5 +14,7 @@ namespace Api.Domain.Interfaces
         Task<T> SelectAsync(Guid id);
         Task<IEnumerable<T>> SelectAsync();
         Task<bool> ExistAsync(Guid id);
+        Task<T> FindByConditionAsync(Expression<Func<T, bool>> predicate);
+
     }
 }
