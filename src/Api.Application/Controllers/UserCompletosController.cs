@@ -22,7 +22,7 @@ namespace Api.Application.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public async Task<ActionResult> GetAll()
+        public async Task<ActionResult> GetAll(int page = 1, int pageSize = 10)
         {
             if (!ModelState.IsValid)
             {
@@ -30,7 +30,20 @@ namespace Api.Application.Controllers
             }
             try
             {
-                return Ok(await _service.GetAll());
+                var allUsers = await _service.GetAll();
+
+                var pagedUsers = allUsers
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToList();
+                var hasNext = allUsers.Count() > page * pageSize;
+                var response = new
+                {
+                    items = pagedUsers,
+                    hasNext = hasNext
+                };
+
+                return Ok(response);
             }
             catch (ArgumentException e)
             {
