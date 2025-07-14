@@ -103,16 +103,20 @@ namespace Api.Application.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPut]
-        public async Task<ActionResult> Put([FromBody] UserCompletoDtoUpdate user)
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(Guid id, [FromBody] UserCompletoDtoUpdate user)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+
             try
             {
+                user.Id = id;
+
                 var result = await _service.Put(user);
+
                 if (result != null)
                 {
                     return Ok(result);
@@ -127,6 +131,7 @@ namespace Api.Application.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
+
 
         [AllowAnonymous]
         [HttpDelete("{id}")]
@@ -158,8 +163,6 @@ namespace Api.Application.Controllers
 
             return Ok(result);
         }
-
-
 
     }
 }
