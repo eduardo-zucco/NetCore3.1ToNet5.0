@@ -22,7 +22,16 @@ namespace Api.Application.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public async Task<ActionResult> GetAll(int page = 1, int pageSize = 10)
+        public async Task<ActionResult> GetAll(
+        
+        [FromQuery] string? search = null,
+        [FromQuery] string? name = null,
+        [FromQuery] string? email = null,
+        [FromQuery] string? uf = null,
+        [FromQuery] string? municipio = null,
+        [FromQuery] string? cep = null,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 10)
         {
             if (!ModelState.IsValid)
             {
@@ -30,17 +39,12 @@ namespace Api.Application.Controllers
             }
             try
             {
-                var allUsers = await _service.GetAll();
+                var (items, hasNext) = await _service.GetFiltered(search, name, email, uf, municipio, cep, page, pageSize);
 
-                var pagedUsers = allUsers
-                    .Skip((page - 1) * pageSize)
-                    .Take(pageSize)
-                    .ToList();
-                var hasNext = allUsers.Count() > page * pageSize;
                 var response = new
                 {
-                    items = pagedUsers,
-                    hasNext = hasNext
+                    items,
+                    hasNext
                 };
 
                 return Ok(response);
