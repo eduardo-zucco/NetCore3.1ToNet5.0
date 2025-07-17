@@ -17,6 +17,7 @@ namespace Api.Domain.Dtos.UserCompleto
         public string Email { get; set; }
         [Required(ErrorMessage = "UF é campo Obrigatorio")]
         [StringLength(2, ErrorMessage = "UF deve ter no máximo {1} caracteres.")]
+        [RegularExpression(@"^[A-Z]{2}$")]
         public string Uf { get; set; }
         [Required(ErrorMessage = "Nome de Município é campo Obrigatorio")]
         [StringLength(100, ErrorMessage = "Nome de Município deve ter no máximo {1} caracteres.")]

@@ -16,6 +16,7 @@ namespace Api.Domain.Entities
         public string Email { get; set; }
         [Required]
         [MaxLength(2)]
+        [RegularExpression(@"^[A-Z]{2}$")]
         public string Uf { get; set; }
         [Required]
         [MaxLength(100)]
