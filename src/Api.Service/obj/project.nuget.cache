@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pbUHLy/p3TauSoGoRUSNlrz474T7kK+gwa7MP5Egc0FJWSEl9eQnfCk8cnFurcAW8MWfiCOCCe2rR5OtDhy2QA==",
+  "dgSpecHash": "07JlsGB/I+5QyORBsMxcJ0uJHfik8apaOx/1oMReYWkLvCzHsdT5Rdl00pEdmGSXCzBrfjvRGxMahD2XwrGtpQ==",
   "success": true,
-  "projectFilePath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj",
+  "projectFilePath": "c:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

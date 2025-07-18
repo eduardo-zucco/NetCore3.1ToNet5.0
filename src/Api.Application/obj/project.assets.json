@@ -2413,14 +2413,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj": {
-              "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj"
+            "c:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj": {
+              "projectPath": "c:\\ArquivosEdu\\Net5ToNet6\\src\\Api.CrossCutting\\CrossCutting.csproj"
             },
             "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj": {
               "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Domain\\Domain.csproj"
             },
-            "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj": {
-              "projectPath": "C:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj"
+            "c:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj": {
+              "projectPath": "c:\\ArquivosEdu\\Net5ToNet6\\src\\Api.Service\\Service.csproj"
             }
           }
         }

@@ -164,7 +164,6 @@ namespace Api.Application.Controllers
 
             if (result == null)
                 return NotFound();
-
             return Ok(result);
         }
 
