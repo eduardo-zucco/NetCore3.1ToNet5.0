@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 #nullable enable
 namespace Api.Domain.Entities
 {
+    [Table("SW_PARAMETRO")]
     public class Sw_ParametroEntity
     {
         [Key]
@@ -17,21 +18,16 @@ namespace Api.Domain.Entities
         [Column("CHAVE")]
         public string? Chave { get; set; }
         [Column("DESCRICAO")]
+        [MaxLength(150)]
         public string? Descricao { get; set; }
         [Column("VALOR")]
         public string? Valor { get; set; }
         [Column("VALORINT")]
         public int? ValorInt { get; set; }
         [Column("FILIAL")]
+        [MaxLength(4)]
         public string? Filial { get; set; }
         [Column("USUARIO")]
         public int? Usuario { get; set; }
-        private DateTime? _createAt;
-        public DateTime? CreateAt
-        {
-            get { return _createAt; }
-            set { _createAt = (value == null ? DateTime.UtcNow : value); }
-        }
-        public DateTime? UpdateAt { get; set; }
     }
 }

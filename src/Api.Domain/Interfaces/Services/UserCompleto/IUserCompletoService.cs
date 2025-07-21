@@ -6,6 +6,7 @@ using Api.Domain.Dtos.UserCompleto;
 
 namespace Api.Domain.Interfaces.Services.UserCompleto
 {
+    #nullable enable
     public interface IUserCompletoService
     {
         Task<UserCompletoDto> Get(Guid id);
@@ -23,7 +24,6 @@ namespace Api.Domain.Interfaces.Services.UserCompleto
             string? cep = null,
             int page = 1,
             int pageSize = 10);
-
     }
 
 }

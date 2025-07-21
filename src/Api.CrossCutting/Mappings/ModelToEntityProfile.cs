@@ -23,6 +23,9 @@ namespace Api.CrossCutting.Mappings
          CreateMap<UserCompletoModel, UserCompletoEntity>()
                .ReverseMap();
 
+         CreateMap<Sw_ParametroModel, Sw_ParametroEntity>()
+               .ReverseMap();
+
       }
    }
 }

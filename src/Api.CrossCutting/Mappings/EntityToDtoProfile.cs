@@ -1,5 +1,6 @@
 using Api.Domain.Dtos.Cep;
 using Api.Domain.Dtos.Municipio;
+using Api.Domain.Dtos.Sw_Parametro;
 using Api.Domain.Dtos.Uf;
 using Api.Domain.Dtos.User;
 using Api.Domain.Dtos.UserCompleto;
@@ -55,6 +56,16 @@ namespace Api.CrossCutting.Mappings
          CreateMap<UserCompletoDtoUpdateResult, UserCompletoEntity>()
             .ReverseMap();
 
+
+
+         CreateMap<Sw_ParametroDto, Sw_ParametroEntity>()
+            .ReverseMap();
+
+         CreateMap<Sw_ParametroDtoCreateResult, Sw_ParametroEntity>()
+            .ReverseMap();
+
+         CreateMap<Sw_ParametroDtoUpdateResult, Sw_ParametroEntity>()
+            .ReverseMap();
       }
    }
 }

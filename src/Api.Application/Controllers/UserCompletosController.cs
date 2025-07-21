@@ -23,7 +23,7 @@ namespace Api.Application.Controllers
         [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult> GetAll(
-        
+
         [FromQuery] string? search = null,
         [FromQuery] string? name = null,
         [FromQuery] string? email = null,
@@ -64,6 +64,7 @@ namespace Api.Application.Controllers
             {
                 return BadRequest(ModelState);
             }
+
             try
             {
                 var result = await _service.Get(id);
