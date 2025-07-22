@@ -6,6 +6,7 @@ using Api.Domain.Dtos.UserCompleto;
 
 namespace Api.Domain.Interfaces.Services.UserCompleto
 {
+    #nullable enable
     public interface IUserCompletoService
     {
         Task<UserCompletoDto> Get(Guid id);
@@ -14,7 +15,15 @@ namespace Api.Domain.Interfaces.Services.UserCompleto
         Task<UserCompletoDtoUpdateResult> Put(UserCompletoDtoUpdate user);
         Task<bool> Delete(Guid id);
         Task<UserCompletoDto> GetByEmail(string email);
-
+        Task<(IEnumerable<UserCompletoDto> items, bool hasNext)> GetFiltered(
+            string? search = null,
+            string? name = null,
+            string? email = null,
+            string? uf = null,
+            string? municipio = null,
+            string? cep = null,
+            int page = 1,
+            int pageSize = 10);
     }
 
 }

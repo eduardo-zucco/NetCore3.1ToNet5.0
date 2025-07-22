@@ -11,6 +11,7 @@ namespace Api.Domain.Repository
     public interface IUserCompletoRepository : IRepository<UserCompletoEntity>
     {
         Task<UserCompletoEntity> GetByEmail(string email);
+        IQueryable<UserCompletoEntity> GetAllQueryable();
 
         
     }

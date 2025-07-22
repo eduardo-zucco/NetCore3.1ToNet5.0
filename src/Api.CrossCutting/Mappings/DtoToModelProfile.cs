@@ -1,5 +1,6 @@
 using Api.Domain.Dtos.Cep;
 using Api.Domain.Dtos.Municipio;
+using Api.Domain.Dtos.Sw_Parametro;
 using Api.Domain.Dtos.Uf;
 using Api.Domain.Dtos.User;
 using Api.Domain.Dtos.UserCompleto;
@@ -44,11 +45,19 @@ namespace Api.CrossCutting.Mappings
                 .ReverseMap();
             #endregion
 
-             CreateMap<UserCompletoModel, UserCompletoDto>()
+            CreateMap<UserCompletoModel, UserCompletoDto>()
                 .ReverseMap();
             CreateMap<UserCompletoModel, UserCompletoDtoCreate>()
                 .ReverseMap();
             CreateMap<UserCompletoModel, UserCompletoDtoUpdate>()
+                .ReverseMap();
+
+
+            CreateMap<Sw_ParametroModel, Sw_ParametroDto>()
+                .ReverseMap();
+            CreateMap<Sw_ParametroModel, Sw_ParametroDtoCreate>()
+                .ReverseMap();
+            CreateMap<Sw_ParametroModel, Sw_ParametroDtoUpdate>()
                 .ReverseMap();
 
         }

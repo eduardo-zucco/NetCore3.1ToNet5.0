@@ -47,4 +47,5 @@ Api.Application.Tests
 ----------------------------------------------------------------------------------------
 
 Api.Integration.Tests
-       1 - Testar todas as Requisições		
+       1 - Testar todas as Requisições
+	

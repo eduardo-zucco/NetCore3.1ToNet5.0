@@ -22,6 +22,8 @@ namespace Api.CrossCutting.DependencyInjection
             serviceCollection.AddScoped<IMunicipioRepository, MunicipioImplementation>();
             serviceCollection.AddScoped<ICepRepository, CepImplementation>();
 
+            serviceCollection.AddScoped<ISw_ParametroRepository, Sw_ParametroImplementation>();
+
             if (Environment.GetEnvironmentVariable("DATABASE").ToLower() == "SQLSERVER".ToLower())
             {
                 serviceCollection.AddDbContext<MyContext>(

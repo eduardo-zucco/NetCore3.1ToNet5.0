@@ -25,16 +25,7 @@ namespace Api.Data.Context
 
             modelBuilder.Entity<UserCompletoEntity>(new UserCompletoMap().Configure);
 
-            modelBuilder.Entity<UserEntity>().HasData(
-                new UserEntity
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Administrador",
-                    Email = "mfrinfo@mail.com",
-                    CreateAt = DateTime.Now,
-                    UpdateAt = DateTime.Now,
-                }
-            );
+            modelBuilder.Entity<Sw_ParametroEntity>(new Sw_ParametroMap().Configure);
 
             UfSeeds.Ufs(modelBuilder);
         }

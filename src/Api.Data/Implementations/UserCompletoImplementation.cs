@@ -19,6 +19,11 @@ namespace Api.Data.Implementations
             _dataset = context.Set<UserCompletoEntity>();
         }
 
+        public IQueryable<UserCompletoEntity> GetAllQueryable()
+        {
+           return _dataset.AsNoTracking();
+        }
+
         public async Task<UserCompletoEntity> GetByEmail(string email)
         {
             return await _dataset.FirstOrDefaultAsync(u => u.Email == email);

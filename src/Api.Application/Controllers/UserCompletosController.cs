@@ -22,7 +22,16 @@ namespace Api.Application.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public async Task<ActionResult> GetAll()
+        public async Task<ActionResult> GetAll(
+
+        [FromQuery(Name = "search")] string? search = null,
+        [FromQuery] string? name = null,
+        [FromQuery] string? email = null,
+        [FromQuery] string? uf = null,
+        [FromQuery] string? municipio = null,
+        [FromQuery] string? cep = null,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 10)
         {
             if (!ModelState.IsValid)
             {
@@ -30,7 +39,15 @@ namespace Api.Application.Controllers
             }
             try
             {
-                return Ok(await _service.GetAll());
+                var (items, hasNext) = await _service.GetFiltered(search, name, email, uf, municipio, cep, page, pageSize);
+
+                var response = new
+                {
+                    items,
+                    hasNext
+                };
+
+                return Ok(response);
             }
             catch (ArgumentException e)
             {
@@ -47,6 +64,7 @@ namespace Api.Application.Controllers
             {
                 return BadRequest(ModelState);
             }
+
             try
             {
                 var result = await _service.Get(id);
@@ -90,16 +108,20 @@ namespace Api.Application.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPut]
-        public async Task<ActionResult> Put([FromBody] UserCompletoDtoUpdate user)
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(Guid id, [FromBody] UserCompletoDtoUpdate user)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+
             try
             {
+                user.Id = id;
+
                 var result = await _service.Put(user);
+
                 if (result != null)
                 {
                     return Ok(result);
@@ -114,6 +136,7 @@ namespace Api.Application.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
+
 
         [AllowAnonymous]
         [HttpDelete("{id}")]
@@ -142,11 +165,8 @@ namespace Api.Application.Controllers
 
             if (result == null)
                 return NotFound();
-
             return Ok(result);
         }
-
-
 
     }
 }

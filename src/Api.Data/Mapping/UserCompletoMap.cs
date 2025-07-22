@@ -28,6 +28,7 @@ namespace Api.Data.Mapping
                 .IsRequired()
                 .HasMaxLength(2);
 
+
             builder.Property(u => u.Municipio)
                 .IsRequired()
                 .HasMaxLength(100);

@@ -1,5 +1,7 @@
+using Api.Domain.Interfaces.Services;
 using Api.Domain.Interfaces.Services.Cep;
 using Api.Domain.Interfaces.Services.Municipio;
+using Api.Domain.Interfaces.Services.Sw_Parametro;
 using Api.Domain.Interfaces.Services.Uf;
 using Api.Domain.Interfaces.Services.User;
 using Api.Domain.Interfaces.Services.UserCompleto;
@@ -20,6 +22,12 @@ namespace Api.CrossCutting.DependencyInjection
             serviceCollection.AddTransient<ICepService, CepService>();
 
             serviceCollection.AddTransient<IUserCompletoService, UserCompletoService>();
+
+            serviceCollection.AddTransient<ISw_ParametroService, Sw_ParametroService>();
+
+
+            serviceCollection.AddTransient<IMetadataService, MetadataService>();
+
         }
     }
 }
