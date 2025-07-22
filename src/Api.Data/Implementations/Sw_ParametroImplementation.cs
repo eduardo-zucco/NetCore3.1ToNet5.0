@@ -19,7 +19,37 @@ namespace Api.Data.Implementations
         {
             _dataSet = context.Set<Sw_ParametroEntity>();
         }
+
+        public async Task<(IEnumerable<Sw_ParametroEntity> items, int totalCount)> SelectWithFilterAsync(string filter, int page, int pageSize)
+        {
+            var query = _dataSet.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                filter = filter.ToLower();
+
+                query = query.Where(x =>
+                    (x.Chave != null && x.Chave.ToLower().Contains(filter)) ||
+                    (x.Descricao != null && x.Descricao.ToLower().Contains(filter)) ||
+                    (x.Valor != null && x.Valor.ToLower().Contains(filter)) ||
+                    (x.Filial != null && x.Filial.ToLower().Contains(filter)) ||
+                    x.ValorInt.ToString().Contains(filter) ||
+                    x.Usuario.ToString().Contains(filter)
+                );
+            }
+
+            var totalCount = await query.CountAsync();
+
+            var items = await query
+            .OrderBy(x => x.Id)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+
+            return (items, totalCount);
+        }
     }
+
 
 
 }

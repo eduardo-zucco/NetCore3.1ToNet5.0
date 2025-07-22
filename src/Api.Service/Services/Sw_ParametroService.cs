@@ -79,6 +79,17 @@ namespace Api.Service.Services
             var result = await _repository.UpdateAsync(entity);
             return _mapper.Map<Sw_ParametroDtoUpdateResult>(result);
         }
+
+        public async Task<(IEnumerable<Sw_ParametroDto> items, bool hasNext)> GetFiltered(string filter, int page = 1, int pageSize = 10)
+        {
+            var (entities, totalCount) = await _repository.SelectWithFilterAsync(filter, page, pageSize);
+            
+            var dtos = _mapper.Map<IEnumerable<Sw_ParametroDto>>(entities);
+
+            var hasNext = (page * pageSize) < totalCount;
+
+            return (dtos, hasNext);
+        }
     }
 
 

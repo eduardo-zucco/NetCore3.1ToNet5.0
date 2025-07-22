@@ -11,6 +11,9 @@ namespace Api.Domain.Repository
 {
     public interface ISw_ParametroRepository : ISwRepository<Sw_ParametroEntity>
     {
+
+        Task<(IEnumerable<Sw_ParametroEntity> items, int totalCount)> SelectWithFilterAsync(string filter, int page, int pageSize);
+
         
     }
 }

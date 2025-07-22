@@ -40,20 +40,33 @@ namespace Api.Application.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
+
         [AllowAnonymous]
-        [HttpGet("all")]
-        public async Task<ActionResult> GetAll()
+        [HttpGet]
+        public async Task<ActionResult> GetAll(
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 10,
+        [FromQuery(Name = "search")] string? search = "")
         {
             try
             {
-                var result = await _service.GetAll();
-                return Ok(result);
+
+                var (items, hasNext) = await _service.GetFiltered(search ?? "", page, pageSize);
+
+                var response = new
+                {
+                    items,
+                    hasNext
+                };
+
+                return Ok(response);
             }
             catch (ArgumentException e)
             {
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
+
         [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] Sw_ParametroDtoCreate dto)
@@ -72,19 +85,28 @@ namespace Api.Application.Controllers
             }
         }
         [AllowAnonymous]
-        [HttpPut]
-        public async Task<ActionResult> Put([FromBody] Sw_ParametroDtoUpdate dto)
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(int id, [FromBody] Sw_ParametroDtoUpdate dto)
         {
             if (!ModelState.IsValid)
+            {
                 return BadRequest(ModelState);
+            }
 
             try
             {
-                var result = await _service.Update(dto);
-                if (result == null)
-                    return NotFound();
+                dto.Id = id;
 
-                return Ok(result);
+                var result = await _service.Update(dto);
+
+                if (result != null)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return BadRequest();
+                }
             }
             catch (ArgumentException e)
             {
@@ -93,7 +115,7 @@ namespace Api.Application.Controllers
         }
 
         [AllowAnonymous]
-        [HttpDelete("{id:int}")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
             if (!ModelState.IsValid)

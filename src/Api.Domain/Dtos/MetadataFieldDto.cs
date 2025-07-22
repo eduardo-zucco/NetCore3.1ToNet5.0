@@ -12,6 +12,8 @@ namespace Api.Domain.Dtos
         public string Label { get; set; }
         public bool Required { get; set; } = false;
         public int GridColumns { get; set; } = 12;
-        public string Type { get; set; } = "string";
+        public string Type { get; set; }
+        public int? maxLength { get; set; }
+        public int maxValue { get; set; }
     }
 }

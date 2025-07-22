@@ -24,7 +24,7 @@ namespace Api.Application.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAll(
 
-        [FromQuery] string? search = null,
+        [FromQuery(Name = "search")] string? search = null,
         [FromQuery] string? name = null,
         [FromQuery] string? email = null,
         [FromQuery] string? uf = null,
