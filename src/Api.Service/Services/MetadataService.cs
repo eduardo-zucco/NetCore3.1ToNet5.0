@@ -24,15 +24,68 @@ namespace Api.Service.Services
             return new MetadataDto
             {
                 version = 1,
-                title = "SW_PARAMETROS",
+                title = "TABELA_DE_PARAMETROS",
+                serviceApi = "http://localhost:5000/api/sw_parametros",
                 fields = new List<MetadataFieldDto>
                 {
-                    new MetadataFieldDto { Property = "chave", Label = "Chave", Required = true, GridColumns = 6, maxLength = 100, Type = "string"},
-                    new MetadataFieldDto { Property = "descricao", Label = "Descrição", GridColumns = 6, maxLength = 150, Type = "string"},
-                    new MetadataFieldDto { Property = "valor", Label = "Valor", GridColumns = 6, Type = "string", maxLength = 60000 },
-                    new MetadataFieldDto { Property = "valorInt", Label = "Valor Int", GridColumns = 6, Type = "number", maxValue = int.MaxValue },
-                    new MetadataFieldDto { Property = "filial", Label = "Filial", GridColumns = 6, maxLength = 4, Type = "string"},
-                    new MetadataFieldDto { Property = "usuario", Label = "Usuário", GridColumns = 6, maxValue = int.MaxValue, Type = "number" }
+                    new MetadataFieldDto
+                    {
+                        Property = "chave",
+                        Label = "Chave",
+                        Required = true,
+                        ShowRequired = true,
+                        GridColumns = 6,
+                        MaxLength = 100,
+                        Type = "string",
+                        ErrorMessage = "Campo Requerido",
+                        Placeholder = "Digite a chave",
+                        Container = "Parâmetros"
+                    },
+                    new MetadataFieldDto
+                    {
+                        Property = "descricao",
+                        Label = "Descrição",
+                        GridColumns = 6,
+                        MaxLength = 150,
+                        Type = "string",
+                        Placeholder = "Digite a descrição"
+                    },
+                    new MetadataFieldDto
+                    {
+                        Property = "valor",
+                        Label = "Valor",
+                        GridColumns = 6,
+                        MaxLength = 60000,
+                        Type = "string",
+                        Placeholder = "Digite o valor"
+                    },
+                    new MetadataFieldDto
+                    {
+                        Property = "valorInt",
+                        Label = "Valor Int",
+                        GridColumns = 6,
+                        MaxValue = int.MaxValue,
+                        Type = "number",
+                        Placeholder = "Insira o valor numérico"
+                    },
+                    new MetadataFieldDto
+                    {
+                        Property = "filial",
+                        Label = "Filial",
+                        GridColumns = 4,
+                        MaxLength = 4,
+                        Type = "string",
+                        Placeholder = "Digite a filial"
+                    },
+                    new MetadataFieldDto
+                    {
+                        Property = "usuario",
+                        Label = "Usuário",
+                        GridColumns = 6,
+                        MaxValue = int.MaxValue,
+                        Type = "number",
+                        Placeholder = "Insira o número do usuário"
+                    }
                 },
                 keepFilters = true
             };
@@ -59,4 +112,4 @@ namespace Api.Service.Services
         }
     }
 
-}    
+}

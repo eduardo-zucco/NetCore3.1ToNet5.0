@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Application.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api")]
     [ApiController]
     public class MetadatasController : ControllerBase
     {
@@ -19,7 +19,7 @@ namespace Api.Application.Controllers
             _service = service;
         }
 
-        [HttpGet("{entityName}")]
+        [HttpGet("{entityName}/metadata")]
         public async Task<ActionResult> Get(string entityName)
         {
             try
