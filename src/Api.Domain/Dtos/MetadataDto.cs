@@ -7,10 +7,11 @@ namespace Api.Domain.Dtos
 {
     public class MetadataDto
     {
-        public int version { get; set; }
-        public string title { get; set; }
-        public string serviceApi { get; set; }
-        public List<MetadataFieldDto> fields { get; set; }
-        public bool keepFilters { get; set; }
+        public int Version { get; set; }
+        public string Title { get; set; }
+        
+        //public string ServiceApi { get; set; }
+        public List<MetadataFieldDto> Fields { get; set; }
+        public bool KeepFilters { get; set; }
     }
 }

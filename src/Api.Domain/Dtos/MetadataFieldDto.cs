@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Api.Domain.Dtos
 {
+
     public class MetadataFieldDto
     {
         public string Property { get; set; }
@@ -17,8 +19,8 @@ namespace Api.Domain.Dtos
         public int? MaxLength { get; set; }
         public int? MaxValue { get; set; }
         public string ErrorMessage { get; set; } = "Formato Inválido";
-        public string Placeholder { get; set; } = string.Empty;
-        public string Container { get; set; } = string.Empty;
+        public string? Placeholder { get; set; }
+        public string? Container { get; set; }
         public bool ShowRequired { get; set; } = false;
     }
 }

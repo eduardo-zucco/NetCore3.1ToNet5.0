@@ -19,14 +19,13 @@ namespace Api.Service.Services
                 _ => throw new KeyNotFoundException("Entidade não encontrada.")
             };
         }
-        private MetadataDto GetSwParametroMetadata()
+        public MetadataDto GetSwParametroMetadata()
         {
             return new MetadataDto
             {
-                version = 1,
-                title = "TABELA_DE_PARAMETROS",
-                serviceApi = "http://localhost:5000/api/sw_parametros",
-                fields = new List<MetadataFieldDto>
+                Version = 1,
+                Title = "TABELA DE PARÂMETROS",
+                Fields = new List<MetadataFieldDto>
                 {
                     new MetadataFieldDto
                     {
@@ -66,7 +65,7 @@ namespace Api.Service.Services
                         GridColumns = 6,
                         MaxValue = int.MaxValue,
                         Type = "number",
-                        Placeholder = "Insira o valor numérico"
+                        Placeholder = "Insira o valor numérico",   
                     },
                     new MetadataFieldDto
                     {
@@ -84,10 +83,10 @@ namespace Api.Service.Services
                         GridColumns = 6,
                         MaxValue = int.MaxValue,
                         Type = "number",
-                        Placeholder = "Insira o número do usuário"
+                        Placeholder = "Insira o número do usuário",
                     }
                 },
-                keepFilters = true
+                KeepFilters = true
             };
 
         }
@@ -96,18 +95,18 @@ namespace Api.Service.Services
         {
             return new MetadataDto
             {
-                version = 1,
-                title = "User Completo",
-                fields = new List<MetadataFieldDto>
+                Version = 1,
+                Title = "USER COMPLETO",
+                Fields = new List<MetadataFieldDto>
                 {
                     new MetadataFieldDto{  Property = "id", Label = "Código", Key = true },
                     new MetadataFieldDto{  Property = "name", Label = "Nome" },
                     new MetadataFieldDto{  Property = "email", Label = "E-mail" },
                     new MetadataFieldDto{  Property = "uf", Label = "UF" },
-                    new MetadataFieldDto{  Property = "municipio", Label = "Município"  },
+                    new MetadataFieldDto{  Property = "municipio", Label = "Município" },
                     new MetadataFieldDto{  Property = "cep", Label = "CEP"  }
                 },
-                keepFilters = true
+                KeepFilters = true
             };
         }
     }
