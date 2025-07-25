@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Api.Domain.Dtos;
 using Api.Domain.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,6 +36,13 @@ namespace Api.Application.Controllers
             {
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
+        }
+
+        [HttpPost("{entityName}/dynamic-options")]
+        public async Task<ActionResult<PageDynamicTableOptionsDto>> PostDynamicOptions(string entityName)
+        {
+            var result = await _service.GetDynamicOptionsAsync(entityName);
+            return Ok(result);
         }
     }
 }

@@ -15,12 +15,14 @@ namespace Api.Domain.Dtos
         public bool Required { get; set; } = false;
         public int GridColumns { get; set; } = 6;
         public int GridSmColumns { get; set; } = 12;
-        public string Type { get; set; }
+        public string? Type { get; set; }
         public int? MaxLength { get; set; }
         public int? MaxValue { get; set; }
         public string ErrorMessage { get; set; } = "Formato Inválido";
         public string? Placeholder { get; set; }
         public string? Container { get; set; }
         public bool ShowRequired { get; set; } = false;
+        public int? Order { get; set; }
+        public bool Visible { get; set; } = true;
     }
 }
