@@ -70,39 +70,18 @@ namespace Api.Service.Services
             return _mapper.Map<UserCompletoDtoUpdateResult>(result);
         }
 
-        public async Task<(IEnumerable<UserCompletoDto> items, bool hasNext)> GetFiltered(string? search = null, string? name = null, string? email = null, string? uf = null, string? municipio = null, string? cep = null, int page = 1, int pageSize = 10)
+        public async Task<(IEnumerable<UserCompletoDto> items, bool hasNext)> GetFiltered(string search, int page = 1, int pageSize = 10)
         {
-            var query = _repository.GetAllQueryable(); // IQueryable<User>
+            var (entities, totalCount) = await _repository.SelectWithFilterAsync(search, page, pageSize);
 
-            if (!string.IsNullOrEmpty(search))
-                query = query.Where(u => u.Name.Contains(search));
+            var dtos = _mapper.Map<IEnumerable<UserCompletoDto>>(entities);
 
-            if (!string.IsNullOrEmpty(name))
-                query = query.Where(u => u.Name.Contains(name));
+            var hasNext = (page * pageSize) < totalCount;
 
-            if (!string.IsNullOrEmpty(email))
-                query = query.Where(u => u.Email.Contains(email));
-
-            if (!string.IsNullOrEmpty(uf))
-                query = query.Where(u => u.Uf.Contains(uf));
-
-            if (!string.IsNullOrEmpty(municipio))
-                query = query.Where(u => u.Municipio.Contains(municipio));
-
-            if (!string.IsNullOrEmpty(cep))
-                query = query.Where(u => u.Cep.Contains(cep));
-
-            var total = await query.CountAsync();
-
-            var paged = await query
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
-
-            var dtos = _mapper.Map<IEnumerable<UserCompletoDto>>(paged);
-
-            return (dtos, total > page * pageSize);
+            return (dtos, hasNext);
         }
+
+        
 
     }
 }

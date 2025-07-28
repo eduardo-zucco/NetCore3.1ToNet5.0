@@ -12,6 +12,7 @@ namespace Api.Domain.Repository
     {
         Task<UserCompletoEntity> GetByEmail(string email);
         IQueryable<UserCompletoEntity> GetAllQueryable();
+        Task<(IEnumerable<UserCompletoEntity> items, int totalCount)> SelectWithFilterAsync(string search, int page, int pageSize);
 
         
     }
