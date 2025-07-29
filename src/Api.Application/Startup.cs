@@ -29,15 +29,13 @@ namespace application
 
         public IConfiguration Configuration { get; }
         public IWebHostEnvironment _environment { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(builder =>
                 {
-                    builder.AllowAnyOrigin() // Angular
+                    builder.AllowAnyOrigin() 
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
@@ -80,20 +78,13 @@ namespace application
                 paramsValidation.ValidAudience = Environment.GetEnvironmentVariable("Audience");
                 paramsValidation.ValidIssuer = Environment.GetEnvironmentVariable("Issuer");
 
-                // Valida a assinatura de um token recebido
                 paramsValidation.ValidateIssuerSigningKey = true;
 
-                // Verifica se um token recebido ainda é válido
                 paramsValidation.ValidateLifetime = true;
 
-                // Tempo de tolerância para a expiração de um token (utilizado
-                // caso haja problemas de sincronismo de horário entre diferentes
-                // computadores envolvidos no processo de comunicação)
                 paramsValidation.ClockSkew = TimeSpan.Zero;
             });
 
-            // Ativa o uso do token como forma de autorizar o acesso
-            // a recursos deste projeto
             services.AddAuthorization(auth =>
             {
                 auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()

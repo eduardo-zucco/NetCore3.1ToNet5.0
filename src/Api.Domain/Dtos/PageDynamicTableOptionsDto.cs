@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace Api.Domain.Dtos
 {
-    public class MetadataDto
+    public class PageDynamicTableOptionsDto
     {
-        public int Version { get; set; }
+        public string ServiceApi { get; set; }
         public string Title { get; set; }
-        public string? ServiceApi { get; set; }
         public List<MetadataFieldDto> Fields { get; set; }
-        public bool KeepFilters { get; set; }
         public PageDynamicTableActionDto Actions { get; set; }
         public List<PageDynamicTableCustomActionDto> CustomActions { get; set; }
+        public bool KeepFilters { get; set; }
+
     }
 }

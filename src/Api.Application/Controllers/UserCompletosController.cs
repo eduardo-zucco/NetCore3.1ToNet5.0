@@ -19,27 +19,17 @@ namespace Api.Application.Controllers
         {
             _service = service;
         }
-
-        [AllowAnonymous]
+        [Authorize("Bearer")]
         [HttpGet]
         public async Task<ActionResult> GetAll(
-
-        [FromQuery(Name = "search")] string? search = null,
-        [FromQuery] string? name = null,
-        [FromQuery] string? email = null,
-        [FromQuery] string? uf = null,
-        [FromQuery] string? municipio = null,
-        [FromQuery] string? cep = null,
-        [FromQuery] int page = 1,
-        [FromQuery] int pageSize = 10)
+                [FromQuery] int page = 1,
+                [FromQuery] int pageSize = 10,
+                [FromQuery(Name = "search")] string? search = "")
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);  // 400 Bad Request - Solicitação Inválida
-            }
             try
             {
-                var (items, hasNext) = await _service.GetFiltered(search, name, email, uf, municipio, cep, page, pageSize);
+
+                var (items, hasNext) = await _service.GetFiltered(search ?? "", page, pageSize);
 
                 var response = new
                 {
@@ -55,7 +45,7 @@ namespace Api.Application.Controllers
             }
         }
 
-        [AllowAnonymous]
+        [Authorize("Bearer")]
         [HttpGet]
         [Route("{id}", Name = "GetCompleteWithId")]
         public async Task<ActionResult> Get(Guid id)
@@ -81,7 +71,7 @@ namespace Api.Application.Controllers
             }
         }
 
-        [AllowAnonymous]
+        [Authorize("Bearer")]
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] UserCompletoDtoCreate user)
         {
@@ -107,7 +97,7 @@ namespace Api.Application.Controllers
             }
         }
 
-        [AllowAnonymous]
+        [Authorize("Bearer")]
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(Guid id, [FromBody] UserCompletoDtoUpdate user)
         {
@@ -138,7 +128,7 @@ namespace Api.Application.Controllers
         }
 
 
-        [AllowAnonymous]
+        [Authorize("Bearer")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(Guid id)
         {

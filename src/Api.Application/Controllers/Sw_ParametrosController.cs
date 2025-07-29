@@ -20,7 +20,7 @@ namespace Api.Application.Controllers
             _service = service;
         }
 
-        [AllowAnonymous]
+        [Authorize("Bearer")]
         [HttpGet("{id:int}")]
         public async Task<ActionResult> Get(int id)
         {
@@ -41,7 +41,7 @@ namespace Api.Application.Controllers
             }
         }
 
-        [AllowAnonymous]
+        [Authorize("Bearer")]
         [HttpGet]
         public async Task<ActionResult> GetAll(
         [FromQuery] int page = 1,
@@ -67,7 +67,7 @@ namespace Api.Application.Controllers
             }
         }
 
-        [AllowAnonymous]
+        [Authorize("Bearer")]
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] Sw_ParametroDtoCreate dto)
         {
@@ -84,7 +84,7 @@ namespace Api.Application.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-        [AllowAnonymous]
+        [Authorize("Bearer")]
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] Sw_ParametroDtoUpdate dto)
         {
@@ -114,7 +114,7 @@ namespace Api.Application.Controllers
             }
         }
 
-        [AllowAnonymous]
+        [Authorize("Bearer")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
