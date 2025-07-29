@@ -35,7 +35,7 @@ namespace application
             {
                 options.AddDefaultPolicy(builder =>
                 {
-                    builder.AllowAnyOrigin() // Angular
+                    builder.AllowAnyOrigin() 
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
